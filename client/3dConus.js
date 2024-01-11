@@ -6,7 +6,7 @@ export const conus3D = () => {
   var indexBuffer; //буфер индексов
   var colorBuffer; //буфер цветов
 
-  var angle = 2.0; //угол вращения в радианах
+  var angle = 1.0; //угол вращения в радианах
   var zTranslation = -2.0; // смещение по оси Z
 
   var mvMatrix = mat4.create();
@@ -52,7 +52,7 @@ export const conus3D = () => {
   // получаем элемент canvas
   var canvas = document.getElementById("canvas");
 
-  // Сначала пытаемся получить стандартный контекст WegGK.
+  // Сначала пытаемся получить стандартный контекст WegGL.
   // Если не получится, обращаемся к экспериментальному контексту
   gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
@@ -157,7 +157,7 @@ export const conus3D = () => {
   // // -1.0,  -0.7,  -0.3, //m5
   // ];
 
-  let vertices = drawConus(9);
+  let vertices = drawConus(13);
   
   let indices = [
       // лицевая часть
